@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoalDay Planner</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>GoalDay Planner</h1>
+      <p>
+        Turn your day report into a plan: detect free time, break goals into focused tasks, and push reminders to Google Calendar.
+      </p>
+
+      <section class="card">
+        <h2>1) Daily Report</h2>
+        <div class="grid">
+          <label>Wake-up time <input type="time" id="wakeTime" value="07:00" /></label>
+          <label>Sleep time <input type="time" id="sleepTime" value="23:00" /></label>
+          <label>Date <input type="date" id="planDate" /></label>
+        </div>
+        <label>Busy slots (one per line: <code>HH:MM-HH:MM | title</code>)</label>
+        <textarea id="busySlots" rows="8" placeholder="09:00-10:00 | Standup\n11:30-12:30 | Workout\n14:00-15:30 | Deep work"></textarea>
+      </section>
+
+      <section class="card">
+        <h2>2) Goal Details</h2>
+        <div class="grid">
+          <label>Goal title <input type="text" id="goalTitle" value="Launch my portfolio" /></label>
+          <label>Goal deadline <input type="date" id="goalDeadline" /></label>
+          <label>Total hours required <input type="number" id="goalHours" min="1" value="12" /></label>
+          <label>Preferred session length (minutes) <input type="number" id="sessionLength" min="15" step="15" value="60" /></label>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="analyseBtn">Analyse day & build plan</button>
+        <button id="syncBtn" disabled>Send reminders to Google Calendar</button>
+      </section>
+
+      <section class="card">
+        <h2>Analysis</h2>
+        <pre id="analysisOutput">No analysis yet.</pre>
+      </section>
+
+      <section class="card">
+        <h2>Generated Calendar Tasks</h2>
+        <ul id="tasksList"></ul>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
