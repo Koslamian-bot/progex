@@ -1,0 +1,81 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #10131a;
+  color: #e5e7eb;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.card {
+  background: #171d28;
+  border: 1px solid #2d3a52;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input,
+textarea,
+button {
+  border-radius: 8px;
+  border: 1px solid #42557a;
+  padding: 0.55rem;
+  background: #0f1420;
+  color: #e5e7eb;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+#tasksList {
+  padding-left: 1.2rem;
+}
